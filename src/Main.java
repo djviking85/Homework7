@@ -122,7 +122,26 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        // Пишем код для задачи 2
+        // Василий решил, что будет копить деньги ближайшие 9 лет.
+        // Он хочет знать, какой будет сумма его накоплений каждые полгода
+        // на протяжении этих 9 лет.
+        //
+        //Исходная сумма всё та же — 15 тысяч рублей, проценты банка– 7% ежемесячно.
+        //
+        //Напишите программу, которая будет выводить сумму накоплений
+        // за каждые полгода втечение 9 лет.
+        double  startMoney = 15000;
+        var vklad = 0.07;
+        var moneyVklad = (vklad*startMoney)+startMoney;
+        var mounth = 1;
+        System.out.println( moneyVklad);
+        for (mounth = 1; mounth <= 128; mounth ++) {
+            startMoney = startMoney + startMoney * vklad;
+            if (mounth % 6 == 0) {
+
+                System.out.println(" за месяц " + mounth + " он накопил " + startMoney);
+            }
+        }
     }
     public static void task7 () {
         System.out.println("Задача 7");
