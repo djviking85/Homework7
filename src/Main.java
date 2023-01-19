@@ -105,7 +105,19 @@ public class Main {
     }
     public static void task5 () {
         System.out.println("Задача 5");
-        // Пишем код для задачи 1
+        // Видоизмените программу таким образом, чтобы в консоль выводились
+        // не все месяцы подряд, а только каждый шестой.
+        // Должны быть видны накопления за 6, 12, 18, 24-й иследующие месяцы.
+        double  startMoney = 15000;
+        var vklad = 0.07;
+        var moneyVklad = (vklad*startMoney)+startMoney;
+        var mounth = 1;
+        System.out.println( moneyVklad);
+        for (startMoney = 15000; startMoney < 12_000_000; mounth ++) {
+            startMoney = startMoney+startMoney*vklad;
+            if ( mounth % 6 == 0) {
+
+            System.out.println(" за месяц " + mounth + " он накопил " + startMoney);}}
     }
 
     public static void task6 () {
