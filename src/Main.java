@@ -57,7 +57,29 @@ public class Main {
     }
     public static void task3 () {
         System.out.println("Задача 3");
-        // Пишем код для задачи 1
+        // В стране Y население равно 12 миллионов человек.
+        //
+        //Рождаемость составляет 17 человек на 1000,
+        // смертность— 8 человек.
+        // Рассчитайте, какая численность населения будет через 10 лет,
+        // если показатели рождаемости и смертности постоянны.
+        //
+        //В консоль выведите результат операции на каждый год в
+        // формате: «Год …, численность населения составляет …».
+        var born = 17;
+        var capacity = 12_000_000;
+        var death = 8;
+        var sredniiPrirost = ((born-death)*capacity) / 1000;
+        System.out.println( "средний прирост в год составит " + sredniiPrirost + " Человечишек ");
+
+        var year = 1;
+        for (year =1; year <=10; year = year +1 ) {
+            capacity = sredniiPrirost + capacity;
+            System.out.println(" Год " + year+ " и численность населения составит " + capacity);
+
+
+        }
+
     }
 
     public static void task4 () {
