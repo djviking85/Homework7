@@ -84,7 +84,24 @@ public class Main {
 
     public static void task4 () {
         System.out.println("Задача 4");
-        // Пишем код для задачи 2
+        // Василий решил положить деньги на накопительный счет, где каждый месяц
+        // к сумме его вклада добавляется еще 7%. Первоначальная сумма вклада— 15 тысяч рублей.
+        //
+        //Вычислите и выведите в консоль, сколько месяцев
+        // Василию нужно будет копить, чтобы собрать сумму в 12 миллионов рублей при условии,
+        // что процент банка от накоплений неменяется, а всегда равен 7%.
+        //
+        //Выведите в консоль результат программы с указанием суммы накоплений по каждому месяцу.
+        double  startMoney = 15000;
+        var vklad = 0.07;
+        var moneyVklad = (vklad*startMoney)+startMoney;
+        var mounth = 1;
+        System.out.println( moneyVklad);
+        for (startMoney = 15000; startMoney < 12_000_000; mounth ++) {
+            startMoney = startMoney+startMoney*vklad;
+
+            System.out.println(" за месяц " + mounth+ " он накопил " + startMoney);
+        }
     }
     public static void task5 () {
         System.out.println("Задача 5");
